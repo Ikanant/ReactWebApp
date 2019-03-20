@@ -15,5 +15,21 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'), // dist will be where we output our finished files
         filename: 'bundle.js', // File name we will be exporting too
         publicPath: '/' // Where our code expects to found our bunbdle file. The ROOT in this case
+    },
+    resolve: {
+        // Arrays of the extensions we want webpack to process
+        extensions: ['.js', '.jsx']
+    },
+    devServer: {
+        // Setting we HAVE to enable if we want to use REACT router
+        historyApiFallback: true
+    },
+    // How we want our app to be compiled:
+    module: {
+        rules: [{
+            // Regex the application will use to determine if a file should or should not be compiled
+            test: /\.jsx?/,
+            loader:'babel-loader'
+        }]
     }
 }

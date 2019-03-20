@@ -3,7 +3,7 @@
 {
     "presets": [
         ["@babel/preset-env", { // This object represents the configuration (in this case env)
-            "target": { // This simply affects what kind of ES6 is transpiled
+            "targets": { // This simply affects what kind of ES6 is transpiled
                 "node": "current" // We want newer features we just use current
             }
         }],
