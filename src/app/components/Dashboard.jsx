@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'; // Notice that importing {} means we are importing a function
 
+import { ConnectedTaskList } from './TaskList';
+
 // It's gonna take the form of a function that returns a JSX tag.
 // We use round bracket instead of {} which indicates this is NOT a function
 // This is an object to be returned
@@ -15,7 +17,7 @@ export const Dashboard = ({groups}) => ( // To know how to get groups we have to
         {groups.map(
             group => (
                 <div>
-                    {group.name}
+                    <ConnectedTaskList id={group.id} name={group.name}/>
                 </div>
             )
         )}

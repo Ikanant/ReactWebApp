@@ -13,7 +13,7 @@ export const defaultState = {
     groups:[
         {
             id: "G1",
-            name: "To Do",
+            name: "ToDo",
             owner: "U1"
         },
         {
@@ -24,7 +24,7 @@ export const defaultState = {
         {
             id: "G3",
             name: "Done",
-            owner: "U1"
+            owner: "U2"
         }
     ],
     tasks: [
