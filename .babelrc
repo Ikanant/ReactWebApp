@@ -1,0 +1,12 @@
+// This file is telling Babel that whenever it's called upon (in my case webpack will be calling it)
+// to use these libraries to transform the files (which they know how to handle for example JSX into JS file)
+{
+    "presets": [
+        ["@babel/preset-env", { // This object represents the configuration (in this case env)
+            "target": { // This simply affects what kind of ES6 is transpiled
+                "node": "current" // We want newer features we just use current
+            }
+        }],
+        "@babel/preset-react"
+    ]
+}
