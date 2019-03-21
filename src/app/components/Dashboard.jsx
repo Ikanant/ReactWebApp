@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux'; // Notice that importing {} means we are importing a function
+import { connect } from 'react-redux'; // Notice that importing {} means we are importing an object
 
 import { ConnectedTaskList } from './TaskList';
 
@@ -11,7 +11,7 @@ import { ConnectedTaskList } from './TaskList';
 // is interested in
 export const Dashboard = ({groups}) => ( // To know how to get groups we have to connected. We will use a function called mapStateToProps bellow
     <div>
-        <h2>Dashboard</h2>
+        <h1>Dashboard</h1>
         
         {/* In REACT in order to loop through elements we use a map */}
         {groups.map(
