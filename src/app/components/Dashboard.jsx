@@ -16,7 +16,7 @@ export const Dashboard = ({groups}) => ( // To know how to get groups we have to
         {/* In REACT in order to loop through elements we use a map */}
         {groups.map(
             group => (
-                <div>
+                <div key='group.id'>
                     <ConnectedTaskList id={group.id} name={group.name}/>
                 </div>
             )

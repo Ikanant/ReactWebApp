@@ -2,6 +2,7 @@ import React  from 'react';
 import { Provider } from 'react-redux';
 import { store } from '../store';
 import { ConnectedDashboard } from './Dashboard';
+import { ConnectedNavigation } from './Navigation';
 
 // Router is the parent component all routes have to be inside
 // Route is a component that will look different depending on what the URL is
@@ -14,7 +15,10 @@ export const Main = () => (
         // ANY component inside this provider WILL have access to the store */}
         <Provider store={store}>
             <div>
+                {/* Now we have a navigation that is always present. */}
+                <ConnectedNavigation />
                 {/* Let's now only show the dashboard when the URL says dashboard */}
+
                 <Route 
                     exact // This Route should display ONLY if the path matches EXACTLY
                     path = "/dashboard" 

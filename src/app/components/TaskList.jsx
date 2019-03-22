@@ -4,13 +4,16 @@ import { connect } from 'react-redux'; // Notice that importing {} means we are 
 export const TaskList = ({tasks, name}) => (
     <div>
         <h3>{name}</h3>
-        {tasks.map(task => (
-            <div>
-                <div>{
-                    task.name}
+        <div>
+            {tasks.map(task => (
+                <div key='task.id'>
+                    <div>{
+                        task.name}
+                    </div>
                 </div>
-            </div>
-        ))}
+            ))}
+        </div>dfghdftghdtryfcv
+        <button onClick = { () => createNewTask(id) }>Add new task</button>
     </div>
 )
 
@@ -18,7 +21,6 @@ export const TaskList = ({tasks, name}) => (
 // That's where Props comes in:
 const mapStateToProps = (state, ownProps) => {
     let groupID = ownProps.id;
-    console.log(groupID);
     // Since we are passing name here... we can access it above
     return {
         id: groupID,
